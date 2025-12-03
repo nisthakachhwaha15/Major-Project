@@ -1,0 +1,132 @@
+
+A Project Report 
+on 
+Library Management System (C Programming)
+Course Code: CSEG1032
+
+Submitted in partial fulfilment 
+for the award of the degree
+Of 
+Bachelor of technology 
+[Btech CSE]
+Year:2025-2029
+
+Submitted By:                                        Under the Guidance of:
+NISTHA KACHHWAHA                                   Dr. TANU SINGH
+SAP ID:590025642
+BATCH NO.:38
+
+
+ 
+Abstract
+This project provides an upgraded Library Management System constructed using the C programming language.
+Unlike basic systems that store books simply in memory, this system delivers capabilities closer to a real-world library process.
+
+It enables users to:
+•	Update the system with fresh books
+•	Look up books by author, title, or ID.
+•	Issue and return books
+•	Keep the last borrower's name on file.
+•	Display library statistics such as total books and copies
+
+
+Problem Definition
+Libraries have to manage a lot of books, which is challenging if done by hand. Popular actions like verifying availability or issuing a book become error-prone when done with pen and paper.
+
+A basic digital management system ought to:
+•	Organise book information cleanly
+•	Permit quick searching
+•	Track available copies
+•	Keep borrower information up to date
+•	Maintain records even after they are shut down.
+
+This project's primary goal is to create a straightforward but enhanced library system that shows how fundamental C principles can be used to solve real-world issues.
+ 
+
+Algorithms
+Algorithm: Load Books from File
+1.	Open the text database file.
+2.	Read each line and parse book information.
+3.	Store it into the array of structures.
+4.	If file doesn’t exist, start with an empty library.
+________________________________________
+Algorithm: Add Book
+1.	Ask the user for book details.
+2.	Check if the ID already exists.
+3.	If duplicate → display message.
+4.	Otherwise → insert into list and update count.
+________________________________________
+Algorithm: Issue Book
+1.	Ask user for book ID.
+2.	Find book in the array.
+3.	If available copies > 0:
+o	Decrease available copies
+o	Ask borrower name and save it
+4.	Else display “No copies available”.
+________________________________________
+
+Algorithm: Save Books
+1.	Open file in write mode.
+2.	Write each book record.
+3.	Close file.
+________________________________________
+
+
+Implementation Specifics and Used Programming Concepts
+
+🔹 Structures: To organise book attributes (ID, title, author, copies).
+🔹 Array of structures — To store several books in memory.
+🔹 Text files – To save and load book records.
+🔹 Modularity — Separate .h, .c files for clarity.
+🔹 Functions: Each operation is managed independently.
+
+
+Tests and Results
+
+The program was tested in real-world situations.
+
+Test Case 1: Loading System 
+Books appear automatically upon launch if the file is present. 
+If not, the program begins anew. 
+
+Test Case 2: Add Books 
+There were books written by various authors. 
+Duplicate IDs were rejected, confirming validation works. 
+
+Test Case 3: Look For Books 
+ID, title, and author searches were all dependable. 
+For instance: 
+Input → "Orwell" Output → displays George Orwell's book "1984" 
+
+Test Case 4: Issue and Return 
+Issuing decreased available copies. 
+returning more copies that are available. 
+The borrower's name is recorded. 
+
+Test Case 5: File Persistence 
+
+After closing and reopening: 
+Books remained 
+Copies and last borrower remained unchanged 
+This demonstrates proper file management.
+
+Conclusion & Future Work
+This extended Library Management System shows that even a few beginner-level C concepts can easily be scaled into a more realistic solution.
+ Data persistence, multiple search strategies, statistics, and borrower tracking were introduced within this project.
+While simple, it lays the foundation for more professional systems.
+
+Possible Future Enhancements:
+•	Student management system - who borrowed which book historically
+•	Due date and fine calculator
+•	Admin authentication
+•	Unlimited books using a linked list or dynamic memory 
+
+The project was a great learning experience, building valuable real-world programming skills and understanding.
+
+
+References
+•	The C Programming Language — Kernighan & Ritchie
+•	Let Us C — Yashavant Kanetkar
+•	UPES Course Materials
+•	Google chrome
+
